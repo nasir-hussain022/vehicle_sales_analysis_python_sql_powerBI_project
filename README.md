@@ -94,8 +94,13 @@ WHERE
 ```sql
 -- Convert text columns to integers
 ALTER TABLE inventory_details MODIFY COLUMN mileage INT;
+
 ALTER TABLE vehicle_info MODIFY msrp INT;
+
 ALTER TABLE vehicle_sold MODIFY sale_price INT;
+
+alter table vehicle_sold
+modify column days_on_lot int;
 
 -- Define Primary and Foreign Keys
 ALTER TABLE customers ADD PRIMARY KEY (sale_id);
@@ -383,7 +388,7 @@ FROM
 
 ```sql
 SELECT 
-    (totals.total_rev - costs.total_cost) / totals.total_rev AS gross_profit_margin
+    round(((totals.total_rev - costs.total_cost) / totals.total_rev) * 100,2) AS gross_profit_margin
 FROM
     (SELECT 
         SUM(sale_price) AS total_rev
@@ -396,7 +401,7 @@ FROM
 
 ```
 
-<img width="164" height="47" alt="image" src="https://github.com/user-attachments/assets/67d05fbb-667a-409d-8636-63323a361d54" />
+<img width="178" height="75" alt="Screenshot 2026-04-02 105018" src="https://github.com/user-attachments/assets/c0528734-286d-43ba-bd1b-a95869f8dbd4" />
 
 
 **Task 18: High Mileage (>50k) vs Low Mileage (<50k) Lot Days:**  
