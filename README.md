@@ -17,6 +17,7 @@ The primary goal of this project is to transform raw sales data into actionable 
 **Customer & Product Analysis:** To understand which vehicle models are top performers and identify customer segments that drive the most revenue.
 
 **Decision Support:** To create an interactive dashboard that allows stakeholders to filter data by region, sales representative, or vehicle category.
+
 ---
 
 ## 📌 Project Overview
@@ -34,6 +35,7 @@ The database consists of four interconnected tables:
 **`vehicle_sold`**: Sales data (Sale id, Vehicle id, Sale Price, Days on Lot).
 
 **`inventory_details`**: Logistical data (Sale id, Region, Mileage).
+
 ---
 
 ## 🛠️ Data Cleaning & Structural Integrity
@@ -111,6 +113,7 @@ ALTER TABLE inventory_details ADD CONSTRAINT inventory_fk_customer FOREIGN KEY (
 ALTER TABLE vehicle_sold ADD CONSTRAINT VehicleSold_fk_customers FOREIGN KEY (sale_id) REFERENCES customers(sale_id);
 ALTER TABLE vehicle_sold ADD CONSTRAINT vehicleSold_fk_vehicleInfo FOREIGN KEY (vehicle_id) REFERENCES vehicle_info(vehicle_id);
 ```
+
 ---
 
 ### 3. CRUD Operations
@@ -122,6 +125,7 @@ ALTER TABLE vehicle_sold ADD CONSTRAINT vehicleSold_fk_vehicleInfo FOREIGN KEY (
 **Update:** Standardized and corrected data across the entire database, including updating placeholder prices, fixing regional naming conventions, and cleaning mileage/fuel type values.
 
 **Delete:** Cleaned up the database by removing duplicate information and fixing broken links.
+
 ---
 
 ## Section 1: Basic Analysis
@@ -500,6 +504,8 @@ WHERE
 
 <img width="126" height="92" alt="image" src="https://github.com/user-attachments/assets/4fd718bc-e931-44c6-b71c-1610a92e2a26" />
 
+---
+
 ## How to Improve Sales (Next Steps):
 
 **Predict Demand:** Use historical data to forecast which vehicles will be in high demand, ensuring you don't run out of stock.
@@ -510,10 +516,14 @@ WHERE
 
 **Performance Training:** Analyze your top sales reps’ strategies and apply those techniques to the rest of the team.
 
+---
+
 ## Conclusion
 
 The analysis confirms that data visualization is essential for spotting sales gaps and understanding customer behavior, proving that centralizing data is the fastest way to improve business efficiency.
+
 ---
+
 - **Instagram**: [Follow me on instagram for daily tips](https://www.instagram.com/bca_wale022/)
 - **LinkedIn**: [Connect with me on linkedIn](https://www.linkedin.com/in/nasir-hussain022)
 - **Contact**: [Send me an email](mailto:nasirhussainnk172@gmail.com)
